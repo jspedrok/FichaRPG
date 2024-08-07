@@ -1,3 +1,6 @@
+//Pedro Lucas 
+//Sofia
+//Bianca
 #include <iostream>
 using namespace std;
 int main()
@@ -5,7 +8,6 @@ int main()
     int personagem;
     // Atributos iniciam abaixo
     int pontos = 20;
-    int reducao = 0;
     int forca = 0; // Força
     int des = 0;   // Destreza
     int con = 0;   // Constituição
@@ -14,7 +16,6 @@ int main()
     int car = 0;   // Carisma
     // Habilidades iniciam abaixo
     int pontosB = 40;
-    int reducaoB = 0;
     int af = 0;   // Armas de Fogo
     int ab = 0;   // Armas Brancas
     int atl = 0;  // Atletismo
@@ -29,9 +30,7 @@ int main()
     int idi = 0;  // Idiomas
     // O implante cibernetico começa abaixo
     int imp;    // Nome do implante cibernetico
-    int alt;    // Alternativa
     int gangue; // Gangues
-    int conex;  // Conexões
 
     cout << "Voce vive em um mundo cyberpunk,na cidade de Uberaba, em 2052, onde o consumismo eh o dono de tudo e de todos. O governo eh totalmente controlado por empresas ricas enquanto a maior parte do povo vive numa constante miseria\nVoce tem a opcao de escolher entre tres personagens para viver essa aventura." << endl;
     cout << "\nEscolha seu personagem:" << endl;
@@ -53,7 +52,7 @@ int main()
         break;
     }
     // Comeco da distribuicao dos atributos
-    cout << "\nAgora que voce ja escolheu seu personagem, voce escolhera seus atributos entre Forca, Destreza, Constituicao, Inteligencia, Sabedoria e Carisma\nVoce tera ate 20 pontos para gastar entre as habilidades escolhidas,com o limite de 5 pontos por habilidade, com todas iniciando em 0.\n"
+    cout << "\nAgora que voce ja escolheu seu personagem, voce escolhera seus atributos entre 6 atributos (Forca, Destreza, Constituicao, Inteligencia, Sabedoria e Carisma)\nVoce tera ate 20 pontos para gastar entre as habilidades escolhidas,com o limite de 5 pontos por habilidade, com todas iniciando em 0.\n"
          << endl;
          //Pontos de Força
     if (pontos > 0)
@@ -62,15 +61,15 @@ int main()
         cin >> forca;
         if (forca > 0 && forca <= 5)
         {
-            reducao = reducao + forca;
-            pontos = pontos - reducao;
-            cout << pontos;
+             
+            pontos = pontos - forca;
+            
             cout << "Pontos de Forca:" << forca << endl;
         }
         else
         {
-            cout << "Opcao invalida\n"
-                 << endl;
+            cout << "Opcao invalida\n" << endl;
+            forca=0;
         }
     }
     else
@@ -85,13 +84,13 @@ int main()
         cin >> des;
         if (des > 0 && des <= 5)
         {
-            reducao = reducao + des;
-            pontos = pontos - reducao;
+            pontos = pontos - des;
             cout << "Pontos de Destreza:" << des << endl;
         }
         else
         {
             cout << "Opcao invalida" << endl;
+            des=0;
         }
     }
     else
@@ -106,13 +105,13 @@ if (pontos > 0)
     cin >> con;
     if (con > 0 && con <= 5)
     {
-        reducao = reducao + con;
-        pontos = pontos - reducao;
+        pontos = pontos - con;
         cout << "Pontos de Constituicao:" << con << endl;
     }
     else
     {
         cout << "Opcao invalida" << endl;
+        con=0;
     }
     }
     else
@@ -127,13 +126,14 @@ if (pontos > 0)
     cin >> intl;
     if (intl > 0 && intl <= 5)
     {
-        reducao = reducao + intl;
-        pontos = pontos - reducao;
+        
+        pontos = pontos - intl;
         cout << "Pontos de Inteligencia:" << intl << endl;
     }
     else
     {
         cout << "Opcao invalida" << endl;
+        intl=0;
     }
     }
    else
@@ -148,13 +148,14 @@ if (pontos > 0)
     cin >> sab;
     if (sab > 0 && sab <= 5)
     {
-        reducao = reducao + sab;
-        pontos = pontos - reducao;
+        
+        pontos = pontos - sab;
         cout << "Pontos de Sabedoria:" << sab << endl;
     }
     else
     {
     cout << "Opcao invalida" << endl;
+    sab=0;
     }
     }
    else
@@ -163,19 +164,20 @@ if (pontos > 0)
    }
    
    //Pontos de Carisma
-   if (if (pontos > 0))
+   if ( (pontos > 0))
    {
     cout << "\nEscolha seus pontos de Carisma:" << endl;
     cin >> car;
     if (car > 0 && car <= 5)
     {
-        reducao = reducao + car;
-        pontos = pontos - reducao;
+         
+        pontos = pontos - car;
         cout << "Pontos de Carisma:" << car << endl;
     }
     else
     {
         cout << "Opcao invalida" << endl;
+        car=0;
     }
    }
    else {
@@ -184,24 +186,25 @@ if (pontos > 0)
    
     
     // Comeco da distribuicao das habilidades
-    cout << "Agora que voce ja escolheu seus atributos, voce escolhera suas habilidades entre Arma de Fogo, Arma Branca, Atletismo, Furtividade, Infiltracao, Lutar, Medicina, Persuasao, Tecnologia, Condução, Etiqueta e Idiomas\nVoce tera ate 40 pontos para gastar entre as habilidades escolhidas,com o limite de 10 pontos por habilidade, com todas iniciando em 0.\n"
+    cout << "Agora que voce ja escolheu seus atributos, voce distribuira 40 pontos, com limite de 10 por habilidade entre 12 habilidades: (Arma de Fogo, Arma Branca, Atletismo, Furtividade, Infiltracao, Lutar, Medicina, Persuasao, Tecnologia, Condução, Etiqueta e Idiomas)\n"
          << endl;
          
 //Pontos de Arma de Fogo
-      if (pontos>0)
+      if (pontosB>0)
     {
         cout << "\nEscolha seus pontos de Arma de Fogo: " << endl;
     cin >> af;
-    if (af > 0 && ab <= 10)
+    if (af > 0 && af <= 10)
     {
-        reducaoB = reducaoB + af;
-        pontosB = pontosB - reducaoB;
+         
+        pontosB = pontosB - af;
         cout << "Pontos Arma de Fogo:" << af << endl;
     }
     else
     {
         cout << "Opcao invalida!\n"
              << endl;
+             af=0;
     }
     
       }
@@ -211,19 +214,20 @@ if (pontos > 0)
          
     
     //Pontos de Arma Branca
-    if (pontos > 0)
+    if (pontosB > 0)
    {
     cout << "\nEscolha seus pontos de Arma Branca:" << endl;
     cin >> ab;
     if (ab > 0 && ab <= 10)
     {
-        reducaoB = reducaoB + ab;
-        pontosB = pontosB - reducaoB;
+        
+        pontosB = pontosB - ab;
         cout << "Pontos de Arma branca:" << ab << endl;
     }
     else
     {
         cout << "Opcao invalida!\n"<< endl;
+        ab=0;
     }
      }
    else
@@ -232,39 +236,41 @@ if (pontos > 0)
    }
    
    //Pontos de Atletismo
-   if (pontos>0)
+   if (pontosB>0)
    {
     cout << "\nEscolha seus pontos de Atletismo:" << endl;
     cin >> atl;
     if (atl > 0 && atl <= 10)
     {
-        reducaoB = reducaoB + atl;
-        pontosB = pontosB - reducaoB;
+         
+        pontosB = pontosB - atl;
         cout << "Pontos de Atletismo:" << atl << endl;
     }
     else
     {
-        cout << "Opcao invalida\n"
-             << endl;
+        cout << "Opcao invalida\n"<< endl;
+             atl=0;
    }
-   
-    
+    }
+    else {
+        cout<<"Voce esta sem pontos de habilidades"<<endl;
     }
     //Pontos de Furtividade 
-    if (pontos>0)
+    if (pontosB>0)
     {
     cout << "\nEscolha seus pontos de Furtividade:" << endl;
     cin >> fur;
     if (fur > 0 && fur <= 10)
     {
-        reducaoB = reducaoB + fur;
-        pontosB = pontosB - reducaoB;
+         
+        pontosB = pontosB - fur;
         cout << "Pontos de Furtividade:" << fur << endl;
     }
     else
     {
         cout << "Opcao invalida\n"
              << endl;
+             fur=0;
     }
     }
    else
@@ -273,20 +279,21 @@ if (pontos > 0)
    }
 
     //Pontos de Infiltração
-    if (pontos>0)
+    if (pontosB>0)
     {
     cout << "\nEscolha seus pontos de Infiltracao:" << endl;
     cin >> inf;
     if (inf > 0 && inf <= 10)
     {
-        reducaoB = reducaoB + inf;
-        pontosB = pontosB - reducaoB;
+         
+        pontosB = pontosB - inf;
         cout << "Pontos de Infiltracao:" << inf << endl;
     }
     else
     {
         cout << "Opcao invalida\n"
              << endl;
+             inf=0;
     }
      }
    else
@@ -295,20 +302,21 @@ if (pontos > 0)
    }
 
 //Pontos de Luta
- if (pontos>0)
+ if (pontosB>0)
     {
     cout << "\nEscolha seus pontos de Luta:" << endl;
     cin >> lut;
     if (lut > 0 && lut <= 10)
     {
-        reducaoB = reducaoB + lut;
-        pontosB = pontosB - reducaoB;
+       
+        pontosB = pontosB - lut;
         cout << "Pontos de Luta:" << lut << endl;
     }
     else
     {
         cout << "Opcao invalida\n"
              << endl;
+             lut=0;
     }
  }
    else
@@ -317,41 +325,43 @@ if (pontos > 0)
    }
 
 //Pontos de Medicina
-    if (pontos>0)
+    if (pontosB>0)
     {
-        /cout << "\nEscolha seus pontos de Medicina:" << endl;
+        cout << "\nEscolha seus pontos de Medicina:" << endl;
     cin >> med;
     if (med > 0 && med <= 10)
     {
-        reducaoB = reducaoB + med;
-        pontosB = pontosB - reducaoB;
+         
+        pontosB = pontosB - med;
         cout << "Pontos de Medicina:" << med << endl;
     }
     else
     {
         cout << "Opcao invalida\n"
              << endl;
+             med=0;
     }
     }
     else{
-        cout<<"VVoce esta sem pontos de habilidade"<
+        cout<<"Você esta sem pontos de habilidade"<<endl;
     }
     
     //Pontos de Persuasao
- if (pontos>0)
+ if (pontosB>0)
     {
     cout << "\nEscolha seus pontos de Persuasao: " << endl;
     cin >> per;
     if (per > 0 && per <= 10)
     {
-        reducaoB = reducaoB + per;
-        pontosB = pontosB - reducaoB;
+        
+        pontosB = pontosB - per;
         cout << "Pontos de Persuasao:" << per << endl;
     }
     else
     {
         cout << "Opcao invalida\n"
              << endl;
+             per=0;
     }
     }
    else
@@ -361,69 +371,100 @@ if (pontos > 0)
 
 
     //Pontos de Tecnologia 
-    if (pontos>0)
+    if (pontosB>0)
     {
-     out<<Escolha s
+     
     cout << "\nEscolha seus pontos de Tecnologia: " << endl;
     cin >> tec;
-    if (med > 0 && med <= 10)
+    if (tec > 0 && tec <= 10)
     {
-        reducaoB = reducaoB + tec;
-        pontosB = pontosB - reducaoB;
+         
+        pontosB = pontosB - tec;
         cout << "Pontos de Tecnologia:" << tec << endl;
     }
     else
     {
-        cout << "Opcao invalida\n"
+        cout << "Opcao invalida\n"<<endl;
+        tec=0;
      
- }
+    }
+    }
    else
    {
     cout<<"Voce esta sem pontos de habilidades"<<endl;
    }
-        << endl;
-    }
-    cout << "\nEscolha seus pontos de Conducao:" << endl;
+        
+    //Pontos de Condução
+    if (pontosB>0)
+    {
+        cout << "\nEscolha seus pontos de Conducao:" << endl;
     cin >> cond;
     if (cond > 0 && cond <= 10)
     {
-        reducaoB = reducaoB + cond;
-        pontosB = pontosB - reducaoB;
+        
+        pontosB = pontosB - cond;
         cout << "Pontos de Conducao:" << cond << endl;
     }
     else
     {
         cout << "Opcao invalida\n"
              << endl;
+             cond=0
     }
+    }
+    else
+    {
+        cout<<"Voce esta sem pontos de habilidade"<<endl;
+    }
+    
+    
+    
     //Pontos de etiqueta
-    cout << "\nEscolha seus pontos de Etiqueta:" << endl;
+    if (pontosB>0)
+    {
+        cout << "\nEscolha seus pontos de Etiqueta:" << endl;
     cin >> eti;
     if (eti > 0 && eti <= 10)
     {
-        reducaoB = reducaoB + eti;
-        pontosB = pontosB - reducaoB;
+         
+        pontosB = pontosB - eti;
         cout << "Pontos de Etiqueta:" << eti << endl;
     }
     else
     {
         cout << "Opcao invalida\n"
              << endl;
+             eti=0;
     }
+    }
+    else{
+        cout<<"Voce esta sem pontos de habilidade"<<endl;
+    }
+    
+    
     //Pontos de idioma
-    cout << "\nEscolha seus pontos de Idiomas:" << endl;
+    if (pontosB>0)
+    {
+        cout << "\nEscolha seus pontos de Idiomas:" << endl;
     cin >> idi;
     if (idi > 0 && idi <= 10)
     {
-        reducaoB = reducaoB + idi;
-        pontosB = pontosB - reducaoB;
+        
+        pontosB = pontosB - idi;
         cout << "Pontos de Idioma:" << idi << endl;
     }
     else
     {
         cout << "Opcao invalida\n"
              << endl;
+             idi=0;
     }
+    }
+    else{
+        cout<<"Voce esta sem pontos de habilidade"<<endl;
+    }
+    
+    
 
     cout << "\nEscolha o implante cibernetico presente no seu personagem:" << endl;//se a pessoa gostaria de ter um omplante para ajudar ela vencer o jogo
     cout << "1-Olho Bionico: aumenta o raio de visao e melhora o desmpenho do pesonagem em perceber o seu redor. Valor: M$2000,00(valor unitario)\n2-Perna robotica: ajuda a sobreviver em seu dia a dia e aumenta a sua velocidade. Valor: R$7000,00(valor unitario)\n3- Braco eletronico: sistema de lancamento de projeteis, lanca um missil por um de seus bracos. Valor: R$9000,00(valor unitario)\n 4-Nenhum" << endl;
@@ -449,7 +490,7 @@ if (pontos > 0)
 
     cout << "Voce deseja entrar para alguma gangue? 1(sim) ou 2(nao) " << endl;
     cin >> atl;
-    if (atl = 1)
+    if (atl == 1)
     {
         cout << "Ok, escolha entre as seguintes gangues:\n1-Rebeliao\n2-Aristocratas\n3-Nenhum" << endl;//escolha de qual topo de gangue deve seguir
         cin >> gangue;
