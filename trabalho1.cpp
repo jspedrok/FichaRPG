@@ -409,7 +409,7 @@ if (pontos > 0)
     {
         cout << "Opcao invalida\n"
              << endl;
-             cond=0
+             cond=0;
     }
     }
     else
